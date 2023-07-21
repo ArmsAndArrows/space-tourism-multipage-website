@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Live Site Preview: 
-https://space-tourism-multipage-website.vercel.app/technology
+https://space-tourism-multipage-website-ehgl1qhpv-armsandarrows.vercel.app/?vercelToolbarCode=mHOuq7TZU1KhzBG
 
 
 ## Getting Started

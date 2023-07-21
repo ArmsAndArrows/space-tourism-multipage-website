@@ -1,0 +1,275 @@
+@import "variables";
+
+//RESETS
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+///Typography
+///
+@font-face {
+    font-family: "Bellefair";
+
+    src: url("../../public/fonts/Bellefair-Regular.woff2") format("woff2");
+    src: url("../../public/fonts/Bellefair-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Barlow Condensed";
+    src: url("../../public/fonts/BarlowCondensed-Regular.ttf") format("truetype");
+    src: url("../../public/fonts/BarlowCondensed-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Barlow";
+    src: url("../../public/fonts/Barlow-Regular.ttf") format("truetype");
+    src: url("../../public/fonts/Barlow-Regular.woff2") format("woff2");
+}
+
+:root {
+    font-size: 62.5%; /* Equivalent to 10px */
+}
+
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.subheading-one {
+    font-family: "Bellefair", "serif";
+    font-weight: 400;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.heading-five,
+.subheading-two,
+.text {
+    color: $color-blue;
+    font-weight: 400;
+}
+
+.heading-one {
+    font-size: 8rem;
+    @media (min-width: "500px") {
+        font-size: 15rem;
+    }
+}
+
+.heading-two {
+    font-size: 5.6rem;
+
+    @media (min-width: "500px") {
+        font-size: 8rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 10rem;
+    }
+}
+.heading-three {
+    font-size: 2.4rem;
+    @media (min-width: "500px") {
+        font-size: 4rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 5.6rem;
+    }
+}
+.heading-four {
+    font-size: 1.6rem;
+    @media (min-width: "500px") {
+        font-size: 2.4rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 3.2rem;
+    }
+}
+
+.heading-five {
+    font-family: "Barlow Condensed", "serif";
+    font-size: 1.6rem;
+    letter-spacing: 0.338rem;
+    text-transform: uppercase;
+
+    &__number {
+        color: $color-blue;
+    }
+    &--white {
+        color: $color-white;
+        padding-top: 8.8rem;
+        text-align: center;
+        @media (min-width: "500px") {
+            text-align: left;
+            padding-left: 5.5%;
+            padding-top: 13.6rem;
+        }
+
+        @media (min-width: "1100px") {
+            padding-left: 16.5rem;
+            padding-top: 21.2rem;
+        }
+    }
+
+    @media (min-width: "500px") {
+        font-size: 2rem;
+        letter-spacing: 0.472rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 2.8rem;
+    }
+}
+
+.subheading-one {
+    font-size: 2.8rem;
+}
+
+.subheading-two {
+    font-family: "Barlow Condensed", "serif";
+    font-size: 1.4rem;
+    letter-spacing: 0.235rem;
+    text-transform: uppercase;
+    @media (min-width: "500px") {
+        font-size: 1.6rem;
+        
+    }
+}
+
+.nav-text {
+    font-family: "Barlow Condensed", "serif";
+    font-size: 1.6rem;
+    letter-spacing: 0.27rem;
+    color: $color-white;
+    text-transform: uppercase;
+    display: block;
+    padding-block: 3.9rem;
+    width: 100%;
+
+    @media (min-width: "500px") {
+        font-size: 1.4rem;
+        letter-spacing: 0.236rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 1.6rem;
+        letter-spacing: 0.27rem;
+    }
+}
+
+.text {
+    font-size: 1.5rem;
+    font-family: "Barlow", "Serif";
+    line-height: 2.5rem;
+    @media (min-width: "500px") {
+        font-size: 1.6rem;
+    }
+    @media (min-width: "1100px") {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+span.heading-four{
+    color: $color-dark;
+}
+
+// ///GSAP CLASSES
+
+// //-Navbar
+
+// .a-logo{
+//     transform: translateX(-100%);
+
+// }
+// .a-nav{
+//     opacity: 0;
+// }
+
+
+// //-home
+
+// .a-button{
+//     opacity: 0;
+//     transform: scale(0);
+// }
+
+// //
+
+// .a-title{
+//     opacity: 0;
+//     transform: translateY(-10%);
+
+// }
+
+// .a-box{
+//     opacity: 0;
+//     transform: translateX(-100%);
+// }
+
+// .a-container{
+//     opacity: 0;
+// }
+
+// .a-button-text{
+//     opacity: 0;
+// }
+
+
+// .a-right-close, .a-left-close{
+//     opacity: 0;
+// }
+

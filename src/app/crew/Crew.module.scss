@@ -1,0 +1,183 @@
+@import "../variables.scss";
+
+.crew {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("../../../public/assets/crew/background-crew-mobile.jpg");
+  background-position: fixed;
+
+  @media (min-width: 600px) {
+   
+    background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");
+  }
+  @media (min-width: 1300px) {
+    display: block;
+
+    background-image: url("../../../public/assets/crew/background-crew-desktop.jpg");
+  }
+
+  &__pic {
+    max-width: 100%;
+    object-fit: contain;
+    position: relative;margin: 0 auto;
+    width: 32.7rem;
+    height: 22.3rem;
+    @media (min-width: 600px){
+      width: auto;
+      height: auto;
+      // margin-top: 4rem;
+      padding-inline: 10%;
+
+    }
+    @media (min-width: 1300px){
+      margin: 0;
+      padding-inline: 0;
+     
+    }
+   
+    
+  }
+}
+.image_wrapper {
+  position: relative;
+  
+  @media (min-width: 1300px){
+    width: 100%;
+   
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: rgba($color-blue, 0.3);
+    @media (min-width: 600px){
+      display: none;
+    }
+   
+    
+  }
+}
+
+.text_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  @media (min-width: 600px){
+    flex-direction: column-reverse;
+    
+    gap: 4rem;
+    
+  }
+  @media (min-width: 1300px){
+    margin-top: 15.4rem;
+    align-items: start;
+    align-self: start;
+    
+    
+  }
+ 
+ 
+}
+
+
+
+
+
+.container {
+  padding-inline: 2.4rem;
+  padding-bottom: 5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.2rem;
+  overflow: hidden;
+  @media (min-width: 600px){
+    flex-direction: column-reverse;
+    gap: 6rem;
+    justify-content: space-between;
+    padding-bottom: 0;
+    margin-top: 6rem;
+    padding-inline: 8.8rem;
+  }
+  @media (min-width: 1300px) {
+    overflow: visible;
+    margin-top: 0rem;
+    flex-direction: row-reverse;
+    padding: 0 0 0 16.5rem;
+    
+    
+    }
+}
+
+.pagination {
+  display: flex;
+  gap: 1.6rem;
+ 
+
+  &__button {
+    display: block;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba($color-blue, 0.4);
+    cursor: pointer;
+    @media (min-width: 1300px) {
+      width: 1.5rem;
+      height: 1.5rem;
+    
+    }
+    transition: all 0.35s ease;
+    &:hover{
+      background-color: $color-white;
+    }
+    &__active{
+      background-color: $color-white;
+    }
+  }
+}
+
+
+.person{
+  text-align: center;
+  @media (min-width: 1300px) {
+
+    text-align: start;
+  
+  }
+ 
+
+  &__role{
+    color: $color-blue;
+    
+    
+  }
+  &__name{
+    margin-top: 0.8rem;
+    @media (min-width: 1300px){
+      margin-top: 1.5rem;
+    }
+  }
+  &__text{
+    margin-top: 1.6rem;
+    @media (min-width: 600px){
+      min-height: 8.4rem;
+    }
+    @media (min-width: 1300px){
+      margin-top: 2.7rem;
+      min-height: 5rem;
+    }
+  }
+}
+

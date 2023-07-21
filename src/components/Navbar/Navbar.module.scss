@@ -1,0 +1,128 @@
+@import "../../app/variables.scss";
+
+.header {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    z-index: 9999;
+    @media (min-width: "1100px") {
+    }
+}
+
+.logo {
+    margin: 2.4rem;
+    cursor: pointer;
+    @media (min-width: "500px") {
+        margin: 2.4rem 3.9rem;
+    }
+    @media (min-width: "1100px") {
+        margin: 6.4rem 5.5rem;
+    }
+}
+
+.toggler {
+    position: fixed;
+    z-index: 9999;
+    top: 3.3rem;
+    right: 2.4rem;
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 3.2rem;
+    position: fixed;
+    z-index: 1000;
+    left: 32vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(4rem);
+    padding: min(20vh, 12rem) 3.2rem;
+    transform: translateX(0%);
+    transition: transform 0.35s ease;
+    z-index: 10;
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: center;
+        bottom: auto;
+        padding: 0 3.7rem;
+        
+       
+    }
+    @media (min-width: 1100px) {
+        margin-top: 4rem;
+        padding: 0 5.7rem;
+        gap: 4.8rem;
+        left: 40vw;
+        &:before{
+            content: "";
+            width: 50.85%;
+            height: 1px;
+            background-color: rgba($color-white, 0.2);
+            position: absolute;
+            left:-47%;
+            top:50%;
+            z-index: 1000;
+        }
+    }
+
+    &[data-expanded="false"] {
+        @media (min-width: 600px) {
+            transform: translateX(0%);
+        }
+        transform: translateX(100%);
+    }
+    &__number {
+        font-weight: bold;
+        margin-inline-end: 1.1rem;
+        @media (min-width: 600px) {
+            display: none;
+        }
+        @media (min-width: 1100px) {
+            display: inline-block;
+        }
+    }
+    &__item {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            background-color: $color-white;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+        &:hover:after {
+            opacity: 1;
+            width: 100%;
+        }
+        &__active {
+            position: relative;
+            color: $color-white;
+            &:only-child:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                opacity: 1;
+                height: 3px;
+                background-color: $color-white;
+                transition: all 0.35s ease;
+            }
+        }
+    }
+}
+
+
